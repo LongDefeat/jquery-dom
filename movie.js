@@ -9,7 +9,7 @@ $(function () {
     e.preventDefault();
 
     let title = $("#title").val();
-    let rating = $("rating").val();
+    let rating = $("#rating").val();
 
     let movieInfo = { title, rating, currentId };
     const appendHTML = createMovieInfo(movieInfo);
@@ -17,8 +17,8 @@ $(function () {
     currentId++;
     movieList.push(movieInfo);
 
-    $("movie-table-body").append(appendHTML);
-    $("movie-form").trigger("reset");
+    $("#movie-table-body").append(appendHTML);
+    $("#movie-form").trigger("reset");
   });
 
   /* Delete button functionality */
