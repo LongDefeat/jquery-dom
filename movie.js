@@ -31,7 +31,11 @@ $(function () {
     movieList.splice(indexToRemove, 1);
 
     // removes movie from the DOM
-    $(e.target).closest("tr").remove();
+    $(e.target)
+      .closest("tr")
+      .fadeOut(1000, function () {
+        $(this).remove();
+      });
   });
 });
 
